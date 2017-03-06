@@ -26,5 +26,4 @@ def sqrt(a):
         return x
     else:
         return complex(0, x)
-print(root(-123123, 2))
-print (sqrt(-123123))
+
