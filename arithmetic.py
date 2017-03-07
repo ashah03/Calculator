@@ -25,4 +25,3 @@ def sqrt(a):
         return x
     else:
         return complex(0, x)
-
