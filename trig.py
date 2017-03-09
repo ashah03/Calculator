@@ -1,6 +1,8 @@
 import arithmetic
 import irrational
+
 pi = irrational.pi()
+
 def sin(x, unit):
     if unit == "degrees":
         x = x*pi/180
@@ -11,8 +13,20 @@ def sin(x, unit):
         ans += (arithmetic.power(x, a))/arithmetic.factorial(a) #Adding term
         ans -= (arithmetic.power(x, b))/arithmetic.factorial(b) #Subtracting term
         a+=4 #Every other term
-        b+=4
+        b+=4 #Also here
 
     return round(ans, 9)
-print(sin(60, "degrees"))
+
+def cos(x, unit):
+    a = 2
+    b = 4
+    ans = 1
+    for i in range(10):
+            ans -= arithmetic.power(x, a) / arithmetic.factorial(a)
+            ans += arithmetic.power(x, b) / arithmetic.factorial(b)
+            a += 4
+            b += 4
+
+
+print(cos(90, "degrees"))
 
