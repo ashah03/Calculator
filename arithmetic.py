@@ -9,6 +9,14 @@ def divide(a, b):
         return "Undefined"
     else:
         return multiply(a, power(b, -1))
+def factorial(a):
+    x = 1
+    if a < 0:
+        return("Undefined")
+    else:
+        for i in range(1, a+1):
+            x *= i
+        return(x)
 def power(b, x):
     return b**x
 def root(b, n):
