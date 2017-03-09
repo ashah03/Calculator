@@ -15,3 +15,4 @@ def pi():
         d += 4
         e += 4
     return round(pi, 14)
+print(pi())

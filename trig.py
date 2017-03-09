@@ -1,8 +1,9 @@
 import arithmetic
 import irrational
+pi = irrational.pi()
 def sin(x, unit):
     if unit == "degrees":
-        x = x*irrational.pi()/180
-    print(x)
-print(sin(20))
+        x = x*pi/180
+
+print(sin(20, "degrees"))
 
