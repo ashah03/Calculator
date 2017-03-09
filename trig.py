@@ -13,8 +13,7 @@ def sin(x, unit):
         ans += (arithmetic.power(x, a))/arithmetic.factorial(a) #Adding term
         ans -= (arithmetic.power(x, b))/arithmetic.factorial(b) #Subtracting term
         a+=4 #Every other term
-        b+=4 #Also here
-
+        b+=4
     return round(ans, 9)
 
 def cos(x, unit):
@@ -26,7 +25,7 @@ def cos(x, unit):
             ans += arithmetic.power(x, b) / arithmetic.factorial(b)
             a += 4
             b += 4
-
+    return ans
 
 print(cos(90, "degrees"))
 
