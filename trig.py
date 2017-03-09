@@ -18,13 +18,15 @@ def sin(x, unit):
     return round(ans, 9)
 
 def cos(x, unit):
-        a = 2
-        b = 4
-        ans = 1
-        for i in range(10):
-                ans -= arithmetic.power(x, a) / arithmetic.factorial(a)
-                ans += arithmetic.power(x, b) / arithmetic.factorial(b)
+    a = 2
+    b = 4
+    ans = 1
+    for i in range(10):
+            ans -= arithmetic.power(x, a) / arithmetic.factorial(a)
+            ans += arithmetic.power(x, b) / arithmetic.factorial(b)
+            a += 4
+            b += 4
 
 
-print(sin(60, "degrees"))
+print(cos(90, "degrees"))
 
