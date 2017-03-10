@@ -1,7 +1,7 @@
 def derivative_axton(function):
     if function.find("^") > 0:
         elementList = function.split("^") #Split at power symbol if there is one
-        exPower = int(elementList[1])  # Save old power
+        exPower = float(elementList[1])  # Save old power
     else:
         elementList = [function]
         exPower = 1
@@ -16,7 +16,7 @@ def derivative_axton(function):
         oldCoeff = ""
         for i in range(len(new)-1):
             oldCoeff += new[i] #Identify the old coefficient: everything before x
-        oldCoeff = int(oldCoeff)
+        oldCoeff = float(oldCoeff)
     elif indX == 0:
         oldCoeff = 1
     else:
