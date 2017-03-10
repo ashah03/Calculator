@@ -1,5 +1,12 @@
+import sys
+import arithmetic
 def e():
-
+    a = 1
+    ans = 1
+    for i in range(100):
+            ans += 1 / arithmetic.factorial(a)
+            a += 1
+    return round(ans, 14)
 def pi():
     pi = 3
     a = 2
@@ -15,3 +22,4 @@ def pi():
         d += 4
         e += 4
     return round(pi, 14)
+print(pi())
