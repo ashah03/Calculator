@@ -1,14 +1,26 @@
 def derivative_axton(function):
-    elementList = function.split("^") #Split at power symbol
-    exPower = int(elementList[1]) #Save old power
+    if function.find("^") > 0:
+        elementList = function.split("^") #Split at power symbol if there is one
+        exPower = int(elementList[1])  # Save old power
+    else:
+        elementList = [function]
+        exPower = 1
     new = []
     for i in elementList[0]: #Make a list out of the first term
         new += i
-    indX = new.index("x") #Find index of x
-    oldCoeff = ""
-    for i in range(len(new)-1):
-        oldCoeff += new[i] #Identify the old coefficient: everything before x
-    oldCoeff = int(oldCoeff)
+    if "x" in new:
+        indX = new.index("x") #Find index of x
+    else:
+        indX = -1
+    if indX > 0:
+        oldCoeff = ""
+        for i in range(len(new)-1):
+            oldCoeff += new[i] #Identify the old coefficient: everything before x
+        oldCoeff = int(oldCoeff)
+    elif indX == 0:
+        oldCoeff = 1
+    else:
+        return 0
     newCoeff = oldCoeff * exPower #Identify the new coefficient: the old coefficient times the old power
     newPower = exPower - 1 #Reduce the power by one
     newFunction = (str(newCoeff) + "x^" + str(newPower))  #Make the function into string form
