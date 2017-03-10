@@ -5,11 +5,14 @@ def interpret(expression):
         elementList.append(i)
     isNumber = False
     symbolList = []
+    allowedChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."]
     for i in range(len(elementList)):
-        for j in range(9):
-            if j==elementList[i]:
+        for j in allowedChars:
+            if str(j)==elementList[i]:
                 isNumber = True
-        if isNumber == True:
-            symbolList.append(elementList[i])
+        if isNumber ==  False:
+            symbolList.append(i)
+        isNumber = False
     print(symbolList)
-interpret("5^2*21+4^3/29")
+    if symbolList[len(symbolList)] == len
+interpret("5^2*21+4^3/2.9")
