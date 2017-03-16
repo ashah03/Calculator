@@ -16,6 +16,8 @@ def derivative_axton(function):
         oldCoeff = ""
         for i in range(len(new)-1):
             oldCoeff += new[i] #Identify the old coefficient: everything before x
+        if oldCoeff == "-":
+            oldCoeff = "-1"
         oldCoeff = float(oldCoeff)
     elif indX == 0:
         oldCoeff = 1
