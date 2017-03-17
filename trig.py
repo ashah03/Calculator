@@ -31,8 +31,13 @@ def cos(x, unit):
             b += 4
     return round(ans, 9)
 
+<<<<<<< HEAD
+
+
+=======
 def tan(x, unit):
     if unit == "degrees":
         x = d2r(x)
     return round(sin(x,"radians")/cos(x,"radians"), 9)
+>>>>>>> origin/master
 
