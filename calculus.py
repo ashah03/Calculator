@@ -1,4 +1,5 @@
-def derivative_axton(function):
+def identifyCoeffs(function):
+    isZero = False
     if function.find("^") > 0:
         elementList = function.split("^") #Split at power symbol if there is one
         exPower = float(elementList[1])  # Save old power
@@ -21,8 +22,13 @@ def derivative_axton(function):
         oldCoeff = float(oldCoeff)
     elif indX == 0:
         oldCoeff = 1
-    else:
-        return 0
+    elif type(function) == float or type(function) == int:
+        isZero = True
+    return oldCoeff, exPower, isZero
+def derivative_axton(function):
+    oldCoeff, exPower, isZero = identifyCoeffs(function)
+   # else:
+    #    return 0
     newCoeff = oldCoeff * exPower #Identify the new coefficient: the old coefficient times the old power
     newPower = exPower - 1 #Reduce the power by one
     newFunction = (str(newCoeff) + "x^" + str(newPower))  #Make the function into string form
