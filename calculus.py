@@ -24,7 +24,7 @@ def derivative_axton(function):
         return 0
     else:
         return "Error"
-    newCoeff = oldCoeff * exPower #Identify the new coefficient: the old coefficient times the old power
+    newCoeff = oldCoeff * exPower #Identify the new coefficient; the old coefficient times the old power
     newPower = exPower - 1 #Reduce the power by one
     newFunction = (str(newCoeff) + "x^" + str(newPower))  #Make the function into string form
     for i in newFunction: #Simplify x^0 to nothing and x^1 to x
