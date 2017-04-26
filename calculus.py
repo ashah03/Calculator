@@ -73,4 +73,4 @@ def integral_axton(function):
     return newFunction
 
 
-print(integral_axton(""))
+print(derivative_axton(input("Enter a function in the from of axton")))
