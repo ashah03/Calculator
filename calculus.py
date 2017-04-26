@@ -1,7 +1,7 @@
 def identifyCoeffs(function):
     isZero = False
     if function.find("^") > 0:
-        elementList = function.split("^") #Split at power symbol if there is one
+        elementList = function.split("^") #Split at power symbol if one exists
         exPower = float(elementList[1])  # Save old power
     else:
         elementList = [function]
