@@ -23,7 +23,7 @@ def identifyCoeffs(function):
     elif indX == 0:
         oldCoeff = 1
     elif function.find("x") == -1:
-        oldCoeff
+        oldCoeff = 0
     return oldCoeff, exPower, isZero
 
 def derivative_axton(function):
