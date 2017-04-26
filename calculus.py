@@ -67,4 +67,3 @@ def integral_axton(function):
     return newFunction
 
 
-print(integral_axton("4"))
