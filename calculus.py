@@ -25,6 +25,7 @@ def identifyCoeffs(function):
     elif function.find("x") == -1:
         oldCoeff
     return oldCoeff, exPower, isZero
+
 def derivative_axton(function):
     oldCoeff, exPower, isZero = identifyCoeffs(function)
    # else:
@@ -33,10 +34,10 @@ def derivative_axton(function):
     newPower = exPower - 1 #Reduce the power by one
     newFunction = (str(newCoeff) + "x^" + str(newPower))  #Make the function into string form
     for i in newFunction: #Simplify x^0 to nothing and x^1 to x
+        if newCoeff == 0:
+            return 0
         if newPower == 0.0:
             return newCoeff
-        if newPower == 1.0:
-            return str(newCoeff) + "x"
     return newFunction
 #print(derivative_axton(input("Enter a function: ")))
 
