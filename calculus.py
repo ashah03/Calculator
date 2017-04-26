@@ -22,8 +22,8 @@ def identifyCoeffs(function):
         oldCoeff = float(oldCoeff)
     elif indX == 0:
         oldCoeff = 1
-    elif type(function) == float or type(function) == int:
-        isZero = True
+    elif function.find("x") == -1:
+        oldCoeff
     return oldCoeff, exPower, isZero
 def derivative_axton(function):
     oldCoeff, exPower, isZero = identifyCoeffs(function)
