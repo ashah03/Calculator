@@ -1,3 +1,4 @@
+import trig
 def add(a, b):
     return a+b
 def subtract(a, b):
@@ -35,3 +36,4 @@ def sqrt(a):
         return complex(0, x)
 def mod(a, b):
     return a%b
+
